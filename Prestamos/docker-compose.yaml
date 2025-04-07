@@ -1,0 +1,12 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: Api-Prestamos
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: prestamo
+      MONGO_INITDB_ROOT_PASSWORD: prestamo4321
+    ports:
+      - "27020:27017"
+    volumes:
+      - ./mongodb_data:/data/db
